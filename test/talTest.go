@@ -5,6 +5,7 @@ import (
 	"strings"
 )
 
+//数组异或操作
 func XorOperation(n int, start int) int {
 	var res int
 	for i := 0; i < n; i++ {

@@ -8,6 +8,7 @@ package test
 //	fmt.Println(s)
 //}
 
+//动态规划-最佳观光组合
 func MaxScoreSightseeingPair(A []int) int {
 	ai := A[0]
 	i := 0
