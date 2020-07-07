@@ -8,8 +8,18 @@ import (
 func main() {
 	//res := test.XorOperation(10,5)
 	//fmt.Println(res)
-	names := []string{"wano", "wano", "wano", "wano"}
-	res := test.GetFolderNames(names)
+	//names := []string{"wano", "wano", "wano", "wano"}
+	//res := test.GetFolderNames(names)
+	//fmt.Println(res)
+	/**
+	[5,14,53,80,48]
+	[50,47,3,80,83]
+	 */
+	//A := []int{5,14,53,80,48}
+	//B := []int{50,47,3,80,83}
+	A := []int{-10,-3,0,5,9}
+	//B := []int{0,0,0,0,0,0,0}
+	res := test.SortedArrayToBST(A)
 	fmt.Println(res)
 }
 
