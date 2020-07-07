@@ -35,3 +35,11 @@ func sortedArrayToBSTData(nums []int, left int, right int) *TreeNode {
 func SortedArrayToBST(nums []int) *TreeNode {
 	return sortedArrayToBSTData(nums,0,len(nums)-1)
 }
+
+/*
+func main() {
+	A := []int{-10,-3,0,5,9}
+	//B := []int{0,0,0,0,0,0,0}
+	res := test.SortedArrayToBST(A)
+}
+ */

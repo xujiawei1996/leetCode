@@ -21,6 +21,15 @@ https://leetcode-cn.com/problems/path-sum/
 
  */
 
-func hasPathSum(root *TreeNode, sum int) bool {
 
+func HasPathSum(root *TreeNode, sum int) bool {
+	if root == nil{
+		return false
+	}
+
+	if root.Left == nil && root.Right == nil{
+		return root.Val == sum
+	}
+
+	return HasPathSum(root.Left,sum-root.Val) || HasPathSum(root.Right,sum-root.Val)
 }
