@@ -1,5 +1,10 @@
 package main
 
+import (
+	"fmt"
+	"leetcode/test"
+)
+
 //func main() {
 //	//res := test.DivingBoard(1,5,3)
 //	//fmt.Println(res)
@@ -8,9 +13,17 @@ package main
 //}
 
 func main() {
-	sl := []int{1,2,3,4,5}
-	dst := make([]int, 5)
-	copy(dst, sl)
+	k := 3
+	n := 9
+	res := test.CombinationSum3(k,n)
+	fmt.Println(res)
+	//candidates := []int{1,1,2,2,3}
+	//target := 4
+	//res := test.CombinationSum2(candidates,target)
+	//fmt.Println(res)
+	//sl := []int{1,2,3,4,5}
+	//dst := make([]int, 5)
+	//copy(dst, sl)
 	//n := 4
 	//k := 3
 	//res := test.Combine(n,k)
