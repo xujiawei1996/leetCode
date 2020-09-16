@@ -13,10 +13,13 @@ import (
 //}
 
 func main() {
-	k := 3
-	n := 9
-	res := test.CombinationSum3(k,n)
+	s := "abcabcbb"
+	res := test.LengthOfLongestSubstring(s)
 	fmt.Println(res)
+	//k := 3
+	//n := 9
+	//res := test.CombinationSum3(k,n)
+	//fmt.Println(res)
 	//candidates := []int{1,1,2,2,3}
 	//target := 4
 	//res := test.CombinationSum2(candidates,target)
