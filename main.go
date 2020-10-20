@@ -1,9 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"leetcode/test"
-)
+import "fmt"
 
 //func main() {
 //	//res := test.DivingBoard(1,5,3)
@@ -13,14 +10,27 @@ import (
 //}
 
 func main() {
-	s := "abcabcbb"
-	res := test.LengthOfLongestSubstring(s)
-	fmt.Println(res)
+	//A := []string{"acabcddd","bcbdbcbd","baddbadb","cbdddcac","aacbcccd","ccccddda","cababaab","addcaccd"}
+	////A := []string{"bella","label","roller"}
+	//test.CommonChars(A)
+	copy()
+	str := "abcdefg"
+	for _,i := range str{
+		fmt.Printf("%c",i)
+	}
+
+	//s := "abcabcbb"
+	//for _,chr := range s {
+	//	println(chr - 'a')
+	//}
+	//res := test.LengthOfLongestSubstring(s)
+	//fmt.Println(res)
 	//k := 3
 	//n := 9
 	//res := test.CombinationSum3(k,n)
 	//fmt.Println(res)
-	//candidates := []int{1,1,2,2,3}
+	//candidates := []int{1,1,2,2,3,4,7}
+	//fmt.Println(candidates[4:5])
 	//target := 4
 	//res := test.CombinationSum2(candidates,target)
 	//fmt.Println(res)
