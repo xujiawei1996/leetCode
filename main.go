@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"leetcode/test"
+)
 
 //func main() {
 //	//res := test.DivingBoard(1,5,3)
@@ -13,11 +16,15 @@ func main() {
 	//A := []string{"acabcddd","bcbdbcbd","baddbadb","cbdddcac","aacbcccd","ccccddda","cababaab","addcaccd"}
 	////A := []string{"bella","label","roller"}
 	//test.CommonChars(A)
-	copy()
-	str := "abcdefg"
-	for _,i := range str{
-		fmt.Printf("%c",i)
-	}
+	name := "pyplrz"
+	typed := "ppyypllr"
+	res := test.IsLongPressedName(name,typed)
+	fmt.Println(res)
+	//for k,i := range str{
+	//	fmt.Println(k)
+	//	fmt.Printf("%c\n",i)
+	//	fmt.Println(str1[k])
+	//}
 
 	//s := "abcabcbb"
 	//for _,chr := range s {
