@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"leetcode/test"
+	"strings"
 )
 
 //func main() {
@@ -13,13 +13,44 @@ import (
 //}
 
 func main() {
+	res := strings.Split("",",")
+	//var s = []string{}
+	fmt.Println(res)
+	le := len(res)
+	fmt.Println(le)
+	//A := make(chan bool, 1)
+	//B := make(chan bool)
+	//Exit := make(chan bool)
+	//go func() {
+	//	s := []int{1, 2, 3, 4}
+	//	for i := 0; i < len(s); i++ {
+	//		if ok := <-A; ok {
+	//			fmt.Println("A: ", s[i])
+	//			B <- true
+	//		}
+	//	}
+	//}()
+	//go func() {
+	//	defer func() {
+	//		close(Exit)
+	//	}()
+	//	s := []byte{'A', 'B', 'C', 'D'}
+	//	for i := 0; i < len(s); i++ {
+	//		if ok := <-B; ok {
+	//			fmt.Printf("B: %c\n", s[i])
+	//			A <- true
+	//		}
+	//	}
+	//}()
+	//A <- true
+	//<-Exit
 	//A := []string{"acabcddd","bcbdbcbd","baddbadb","cbdddcac","aacbcccd","ccccddda","cababaab","addcaccd"}
 	////A := []string{"bella","label","roller"}
 	//test.CommonChars(A)
-	name := "pyplrz"
-	typed := "ppyypllr"
-	res := test.IsLongPressedName(name,typed)
-	fmt.Println(res)
+	//name := "pyplrz"
+	//typed := "ppyypllr"
+	//res := test.IsLongPressedName(name,typed)
+	//fmt.Println(res)
 	//for k,i := range str{
 	//	fmt.Println(k)
 	//	fmt.Printf("%c\n",i)
