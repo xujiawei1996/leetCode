@@ -35,16 +35,17 @@ class singlyList{
      */
     function reverseList($head)
     {
+        $temp = NULL;
+        $cur = $head;
+        $pre = NULL;
 
-        $first  = NULL;
-        $second = $head;
-        while ($second) {
-            $next         = $second->next;
-            $second->next = $first;
-            $first        = $second;
-            $second       = $next;
+        while ($cur){
+            $temp = $cur->next;
+            $cur->next = $pre;
+            $pre = $cur;
+            $cur = $temp;
         }
-        return $first;
+        return $pre;
     }
 
     //递归
@@ -103,6 +104,62 @@ class singlyList{
             }
         }
         return $head;
+    }
+
+
+    //删除倒数第N个节点
+    //https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/
+    function removeNthFromEnd($head, $n) {
+        $newHead = new ListNode();
+        $newHead->next = $head;
+        $fast = $newHead;
+        $slow = $newHead;
+
+        while ($n-- && $fast!= NULL){
+            $fast = $fast->next;
+        }
+        //为了拿到上一个节点
+        $fast = $fast->next;
+        //快慢指针
+        while ($fast != NULL){
+            $slow = $slow->next;
+            $fast = $fast->next;
+        }
+        $slow->next = $slow->next->next;
+        return $newHead->next;
+    }
+
+
+    /**
+     * https://leetcode-cn.com/problems/linked-list-cycle-ii/
+     * @param ListNode $head
+     * @return ListNode
+     */
+    function detectCycle($head)
+    {
+        $newHead = $head;
+        $intersection = NULL;
+        $slow = $head;
+        $fast = $head;
+
+        while ($slow != NULL && $fast != NULL){
+            $slow = $slow->next;
+            $fast = $fast->next->next;
+            if ($slow == $fast){
+                $intersection = $slow;
+                break;
+            }
+        }
+
+        while ($newHead != NULL && $intersection != NULL){
+            if ($newHead == $intersection){
+                return $newHead;
+            }
+            $newHead = $newHead->next;
+            $intersection = $intersection->next;
+        }
+
+        return NULL;
     }
 
 }
