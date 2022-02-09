@@ -28,7 +28,7 @@ class Solution
             }
 
             if ($i > 0 && $nums[$i] == $nums[$i - 1]) {
-                $i++;
+                continue;
             }
 
             $num   = $nums[$i];
@@ -43,8 +43,8 @@ class Solution
                     $result  = [$num, $nums[$left], $nums[$right]];
                     $results[] = $result;
                     //去重
-                    while ($left < $right && $left < $len && $nums[$left] == $nums[$left + 1]) $left++;
-                    while ($left < $right && $right > 0 && $nums[$right] == $nums[$right - 1]) $right--;
+                    while ($left < $right && $nums[$left] == $nums[$left + 1]) $left++;
+                    while ($left < $right && $nums[$right] == $nums[$right - 1]) $right--;
                     $right--;
                     $left++;
                 }
@@ -56,6 +56,6 @@ class Solution
     }
 }
 
-$nums = [-1, 0, 1, 2, -1, -4];
+$nums = [-4,-2,-2,-2,0,1,2,2,2,3,3,4,4,6,6];
 $s    = new Solution();
 var_dump($s->threeSum($nums));
