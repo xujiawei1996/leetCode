@@ -91,5 +91,6 @@ class Solution {
     
 }
 
-$s = new Solution();
-echo $s->myAtoi("+10dsa042");
+//$s = new Solution();
+//echo $s->myAtoi("+10dsa042");
+echo date('Y-m-d H-i-s');
