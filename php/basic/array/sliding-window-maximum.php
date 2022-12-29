@@ -53,11 +53,11 @@ class Solution
 
             $q->enqueue($nums[$i]);
 
-            if ($i - $k >= 0 && $q->bottom() == $nums[$i-$k]){
+            if ($i - $k >= 0 && $q->bottom() == $nums[$i - $k]) {
                 $q->dequeue();
             }
 
-            if (!$q->isEmpty() && $i > $k-1){
+            if ($i >= $k - 1) {
                 $res[] = $q->bottom();
             }
         }

@@ -202,6 +202,28 @@ class Tree
         $this->allSumPathDfs($root->left,$target-$root->val,$path);
         $this->allSumPathDfs($root->right,$target-$root->val,$path);
     }
+
+    /**
+     * 对称二叉树
+     * @param TreeNode $root
+     * @return Boolean
+     */
+    function isSymmetric($root) {
+        if ($root == NULL) {
+            return true;
+        }
+        return self::isSymmetricRoot($root->left,$root->right);
+    }
+
+    function isSymmetricRoot($left,$right)
+    {
+        if ($left == NULL && $right == NULL) return true;
+        else if ($left == NULL || $right == NULL) return false;
+
+        if ($left->val != $right->val) return false;
+
+        return self::isSymmetricRoot($left->left,$right->right) && self::isSymmetricRoot($left->right,$right->left);
+    }
 }
 
 $tree = new Tree();
