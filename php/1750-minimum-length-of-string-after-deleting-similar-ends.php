@@ -41,4 +41,5 @@ class Solution
 }
 
 $s = new Solution();
-echo $s->minimumLength('cabaabaca');
+//echo $s->minimumLength('cabaabaca');
+echo phpinfo();
